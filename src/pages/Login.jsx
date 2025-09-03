@@ -87,19 +87,7 @@ export default function Login() {
             {message && <div className="alert">{message}</div>}
             <form onSubmit={handleSubmit} noValidate>
               <Grid container spacing={4} style={{paddingTop:'25px', paddingBottom:'25px'}}>
-                <Grid item xs={12}>
-                  <Input
-                    label="Password"
-                    name="password"
-                    type="password"
-                    value={values.password}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    placeholder="Enter your password"
-                    error={touched.password ? errors.password : ''}
-                    autoComplete="current-password"
-                  />
-                </Grid>
+               
 
                 <Grid item xs={12}>
                   <Input
@@ -111,6 +99,19 @@ export default function Login() {
                     placeholder="Enter your username"
                     error={touched.username ? errors.username : ''}
                     autoComplete="username"
+                  />
+                </Grid>
+                 <Grid item xs={12}>
+                  <Input
+                    label="Password"
+                    name="password"
+                    type="password"
+                    value={values.password}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="Enter your password"
+                    error={touched.password ? errors.password : ''}
+                    autoComplete="current-password"
                   />
                 </Grid>
               </Grid>
