@@ -1,4 +1,3 @@
-// Validation helpers according to assignment rules
 
 export function validateName(name) {
   if (!name) return 'Name is required';
@@ -6,7 +5,6 @@ export function validateName(name) {
   return re.test(name) ? '' : 'Only alphabets and spaces are allowed';
 }
 
-// Alphanumeric with special characters (limit to safe set)
 export function validateUsername(username) {
   if (!username) return 'Username is required';
   const re = /^[A-Za-z0-9._@#-]{3,30}$/;
@@ -26,14 +24,12 @@ export function validateConfirm(confirm, password) {
   return confirm === password ? '' : 'Passwords do not match';
 }
 
-// "Same as Google email" -> restrict to @gmail.com
 export function validateEmail(email) {
   if (!email) return 'Email is required';
   const re = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
   return re.test(email) ? '' : 'Enter a valid @gmail.com address';
 }
 
-// Phone: Country code + number, digits only with optional space, e.g., +91 9876543210
 export function validatePhone(phone) {
   if (!phone) return 'Phone is required';
   const re = /^\+\d{1,3}\s?\d{7,14}$/;
